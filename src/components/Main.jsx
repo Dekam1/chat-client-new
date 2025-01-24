@@ -1,6 +1,7 @@
 import { ConfigProvider, Input } from "antd";
 import RoomsItem from "./RoomsItem";
 import React from "react";
+import { Helmet } from "react-helmet";
 import CreateButton from "./CreateButton";
 import JoinButton from "./JoinButton";
 import useChat from "../hooks/useChat";
@@ -62,6 +63,17 @@ export default function Main() {
 
   return (
     <ConfigProvider theme={styles}>
+      <Helmet>
+        <title>Онлайн Чат - Общайтесь в Реальном Времени | Анонимный Чат</title>
+        <meta
+          name="description"
+          content="Бесплатный онлайн чат для мгновенного общения. Присоединяйтесь и общайтесь с друзьями и новыми знакомыми в реальном времени."
+        />
+        <meta
+          name="keywords"
+          content="онлайн чат, чат, мессенджер, общение, реальное время, бесплатный чат, друзья, знакомства, анонимный чат"
+        />
+      </Helmet>
       <main className="main-page">
         <form onSubmit={handleSubmit} className="main-page__form form">
           <div className="form__header">
