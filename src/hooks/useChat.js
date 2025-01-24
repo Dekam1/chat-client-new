@@ -3,7 +3,9 @@ import { io } from "socket.io-client";
 import { nanoid } from "nanoid";
 import { useNavigate } from "react-router-dom";
 
-const SERVER_URL = "https://chat-server-e6il.onrender.com";
+const SERVER_URL = "http://89.104.68.231:3001";
+
+// "https://chat-server-e6il.onrender.com"
 
 export default function useChat(roomId) {
   const socketRef = React.useRef(null);
